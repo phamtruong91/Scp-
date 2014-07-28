@@ -25,7 +25,7 @@ sudo apt-get install -y openssh-server
 
 ```
 
-Một số cách copy:
+###Các trường hợp
 
 1. Copy một file từ remotehost về localhost
 
@@ -60,33 +60,33 @@ scp username@rh1.edu:/some/remote/directory/file_name username@rh2.edu:/some/rem
 scp your_username@remotehost:source_file_name /some/local/directory
 ```
 
-###Cú pháp nâng cao:
+###Cú pháp nâng cao
 
 ```
 scp [-12346BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file] [-l limit] [-o ssh_option] [-P port]
     [-S program] [[user@]host1:]file1 ... [[user@]host2:]file2
 ```
 
-####Các tham số:
+####Các tham số
 
 -v  :để hiển thị thông tin của quá trình truyền file với SCP:
 Có thể sử dụng tham số **-v** để in ra thông tin debug. Những thông tin này có thể giúp người dùng kiểm tra, sửa lỗi kết nối, xác thực và giải quyết vấn đề.
 
 ```
-	scp -v Label.pdf mrarianto@202.x.x.x:.
+scp -v Label.pdf mrarianto@202.x.x.x:.
 ```
 
 -p  :Hiện thị thời gian dự kiến, tốc độ kết nối
 
 ```
-	scp -p Label.pdf mrarianto@202.x.x.x:.
+scp -p Label.pdf mrarianto@202.x.x.x:.
 ```
 -C  :Nén file trước khi truyền
 
 Có thể thực hiện điều này với tham số **-C**. Nén file trước khi truyền sẽ giúp chuyển file nhanh hơn, đặc biệt với các file có dung lượng cao. Khi file đến đích sẽ tự động được giải nén để trở lại trạng thái ban đầu.
 
 ```	
-	scp -Cpv messages.log mrarianto@202.x.x.x:.
+scp -Cpv messages.log mrarianto@202.x.x.x:.
 ```
 
 -c  :Lựa chọn mã khác để mã hóa cho file:
@@ -94,7 +94,7 @@ Có thể thực hiện điều này với tham số **-C**. Nén file trước 
 Ở chế độ mặc định SCP sử dụng mã AES-128 để mã hóa file. Ta có thể chọn loại mã hóa khác (3DES) như sau:
 
 ```
-	scp -c 3des Label.pdf mrarianto@202.x.x.x:.
+scp -c 3des Label.pdf mrarianto@202.x.x.x:.
 ```
 
 Chú ý: **-C** và **-c**
@@ -103,14 +103,14 @@ Chú ý: **-C** và **-c**
 Thực hiện điều này với tham số **-l**. Đơn vị của băng thông đường truyền là kilobit/giây. Như vậy, muốn hạn chế đường truyền là 50KB/s (Kil0byte/giây) thì phải đặt: 50 x 8 = 400 (kb/s)
 
 ```
-	scp -l 400 Label.pdf mrarianto@202.x.x.x:.
+scp -l 400 Label.pdf mrarianto@202.x.x.x:.
 ```
 
 -p  :Đặt cổng kết nối
 Ở chế độ mặc định, SCP sử dụng cổng 22, ta có thể thay đổi cổng này với tham số **-P** như sau:
 
 ```	
-	scp -P 2249 Label.pdf mrarianto@202.x.x.x:.
+scp -P 2249 Label.pdf mrarianto@202.x.x.x:.
 ```
 
 Chú ý: **-P** chứ không phải **-p**
