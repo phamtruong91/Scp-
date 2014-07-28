@@ -1,6 +1,7 @@
 Scp
 ====
-#Câu lệnh Scp trong linux
+
+##Câu lệnh Scp trong linux
 
 **SCP** là lệnh dùng để sao chép tập tin giữa các host trên mạng. Nó sử dụng ssh để truyền dữ liệu, cung cấp bảo mật tương tự ssh
 
