@@ -9,7 +9,7 @@ Scp-
 ```
 scp source_file_name username@destination_host:destination_folder
 ```
-Có nghĩa là copy file nguồn *source_file_name* đến thư mục đích *destinationfolder* tại máy đích có ip là *destinationhost* với tài khoản *username*
+Copy file nguồn *source_file_name* đến thư mục đích *destination_folder* tại máy đích có ip là *destination_host* với tài khoản *username*
 
 
 Sau đó các tập tin sẽ được sao chép và truy cập trên thư mục người nhận. Mặc định bạn không có quyền để ghi hoặc thực thi nó, tuy nhiên nếu muốn bạn có thể sử dụng lệnh dưới đây để có toàn quyền:
