@@ -27,34 +27,34 @@ sudo apt-get install -y openssh-server
 
 ###Các trường hợp
 
-# Copy một file từ remotehost về localhost
+* Copy một file từ remotehost về localhost
 
 ```	
 scp username@remotehost:file_name /some/local/directory
 ```
-# Copy một file từ localhost lên remotehost:
+* Copy một file từ localhost lên remotehost:
 
 ```  
 scp file_name username@remotehost:/some/remote/directory
 ```  
-# Copy thư mục foo vào thư mục bar:
+* Copy thư mục foo vào thư mục bar:
 
 ```  
 scp -r foo username@remotehost:/some/remote/directory/bar
 ```  
-# Copy nhiều file:
+* Copy nhiều file:
 
 ```
 scp foo.txt bar.txt username@remotehost:/path/directory/
 ```
 
-# Copy file từ remotehost1 sang remotehost2:
+* Copy file từ remotehost1 sang remotehost2:
 
 ```
 scp username@rh1.edu:/some/remote/directory/file_name username@rh2.edu:/some/remote/directory/
 ```
 
-# Copy file "source_file_name" từ remote host đến localhost
+* Copy file "source_file_name" từ remote host đến localhost
 
 ```
 scp your_username@remotehost:source_file_name /some/local/directory
