@@ -4,7 +4,7 @@ Scp-
 
 **SCP** là lệnh dùng để sao chép tập tin giữa các host trên mạng. Nó sử dụng ssh để truyền dữ liệu, cung cấp bảo mật tương tự ssh
 
-#Cú pháp cơ bản
+###Cú pháp cơ bản
 
 ```
 scp source_file_name username@destination_host:destination_folder
@@ -18,7 +18,7 @@ Sau đó các tập tin sẽ được sao chép và truy cập trên thư mục 
 sudo chmod 777 source_file_name
 ```
 
-#Cài đặt
+###Cài đặt
 
 ```
 sudo apt-get install -y openssh-server
@@ -60,14 +60,14 @@ scp username@rh1.edu:/some/remote/directory/file_name username@rh2.edu:/some/rem
 scp your_username@remotehost:source_file_name /some/local/directory
 ```
 
-#Cú pháp nâng cao:
+###Cú pháp nâng cao:
 
 ```
 scp [-12346BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file] [-l limit] [-o ssh_option] [-P port]
     [-S program] [[user@]host1:]file1 ... [[user@]host2:]file2
 ```
 
-Các tham số:
+####Các tham số:
 
 -v  :để hiển thị thông tin của quá trình truyền file với SCP:
 Có thể sử dụng tham số **-v** để in ra thông tin debug. Những thông tin này có thể giúp người dùng kiểm tra, sửa lỗi kết nối, xác thực và giải quyết vấn đề.
